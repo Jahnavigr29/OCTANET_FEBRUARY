@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Adventures</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function clearForm(event) {
+            event.preventDefault();
+            alert("Message sent successfully!");
+            document.getElementById('contact-form').reset();
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white text-center p-6">
+        <nav class="flex justify-between items-center px-8">
+            <h1 class="text-4xl font-bold">Explore the World with Us</h1>
+            <ul class="flex space-x-6 text-lg">
+                <li><a href="#home" class="hover:underline">Home</a></li>
+                <li><a href="#destinations" class="hover:underline">Destinations</a></li>
+                <li><a href="#contact" class="hover:underline">Contact</a></li>
+            </ul>
+        </nav>
+        <p class="text-lg mt-2">Discover breathtaking destinations and create unforgettable memories.</p>
+    </header>
+    
+    <section id="destinations" class="p-8 text-center">
+        <h2 class="text-3xl font-semibold mb-6">Featured Destinations</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-4 shadow rounded-lg">
+                <img src="image1.png" alt="Beach" class="w-full rounded">
+                <h3 class="text-xl font-bold mt-4">Tropical Paradise</h3>
+                <p>Relax on the finest beaches and enjoy crystal-clear waters.</p>
+            </div>
+            <div class="bg-white p-4 shadow rounded-lg">
+                <img src="image2.png" alt="Mountains" class="w-full rounded">
+                <h3 class="text-xl font-bold mt-4">Majestic Mountains</h3>
+                <p>Experience thrilling hikes and breathtaking landscapes.</p>
+            </div>
+            <div class="bg-white p-4 shadow rounded-lg">
+                <img src="image3.png" alt="City" class="w-full rounded">
+                <h3 class="text-xl font-bold mt-4">Vibrant Cities</h3>
+                <p>Immerse yourself in the culture of bustling metropolises.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="bg-blue-500 text-white text-center p-8">
+        <h2 class="text-3xl font-bold">Start Your Adventure Today</h2>
+        <p class="text-lg my-4">Join us and embark on the journey of a lifetime.</p>
+        <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold text-lg">Book Now</a>
+    </section>
+    
+    <section id="contact" class="p-8 text-center bg-white shadow-lg">
+        <h2 class="text-3xl font-semibold mb-4">Contact Us</h2>
+        <p class="text-lg mb-6">Have questions? Get in touch with us!</p>
+        <form id="contact-form" class="max-w-lg mx-auto" onsubmit="clearForm(event)">
+            <input type="text" placeholder="Your Name" class="w-full p-3 border rounded mb-4">
+            <input type="email" placeholder="Your Email" class="w-full p-3 border rounded mb-4">
+            <textarea placeholder="Your Message" class="w-full p-3 border rounded mb-4"></textarea>
+            <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold">Send Message</button>
+        </form>
+    </section>
+    
+    <footer class="text-center p-4 bg-gray-800 text-white">
+        <p>&copy; 2025 Travel Adventures. All rights reserved.</p>
+    </footer>
+</body>
+</html>
